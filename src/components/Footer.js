@@ -1,11 +1,13 @@
-import ReactJs from "react";
+import React,{Component} from "react";
 import ReactDOM from "react-dom";
 
-const Footer = () => {
+const Footer = (props) => {
+    
     return(
-        <div><hr/>
-            <h2><center>© 2022 All right reserve ❤ Developer Funnel</center></h2>
-        </div>
+        <React.Fragment>
+            <hr/>
+            <h2><center>&copy; 2022 All right reserve ❤ Developer Funnel {props.year} {props.month}</center></h2>
+        </React.Fragment>
     )
 }
 

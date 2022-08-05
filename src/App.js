@@ -1,16 +1,16 @@
-import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import React from 'react';
+import Home from './components/Home';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 const App = () => {
-  return(
-    <div>
-      <Header/>
-      <h1>This is New React App</h1>
-      <Footer/>
-    </div>
+  return (
+    <>
+    <Header/>
+    <Home />
+    <Footer year="2022" month="August" />
+    </>
   )
 }
 
-export default App
-
+export default App;

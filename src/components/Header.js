@@ -1,14 +1,34 @@
-import react from 'react';
-import reactDom from 'react-dom';
+import { render } from '@testing-library/react';
+import React, {Fragment,Component} from 'react';
 
-const Header = () => {
-    return(
-        <div>
-            <h2><center>This is Header</center></h2>
-            <hr/>
-        </div>
-        
+class Header extends Component{
+    constructor(){
+        super();
+        this.state={
+            title:"React Application",
+            keyword:"User text here"
+        }
+        console.log("Inside constructor")
+    }
+    handleChange= (event ) =>{
+        // console.log("event.target.value")
+        this.setState({keyword:event.target.value?event.target.value:'User text here'})
+        this.props.userInput(event.target.value)
+    }
+
+    render(){
+        console.log("Inside Render");
+         return(
+             <Fragment>
+                <header>
+                    <div><h3>{this.state.title}</h3></div>
+                    <center><input onChange={this.handleChange} />
+                    <div>{this.state.keyword}</div>
+                    </center>
+                </header><hr/>
+        </Fragment>
     )
+}
 }
 
 export default Header;
