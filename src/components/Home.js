@@ -1,22 +1,17 @@
-import react,{Component} from 'react';
-import ReactDOM from 'react-dom';
+import React, {Component} from 'react';
+import Header from './Header'
+import Footer from './Footer'
 
 class App extends Component {
-    constructor() {
-        super()
-
-        this.state={
-            title:"React Application",
-            keyword:"This is a test app for React"
-        }
-    }
-    render() {
+    render(){
         return(
-        <>
-            <h2>This is a new {this.state.title}</h2>
-            <p>{this.keyword}</p>
-        </>
+            <>
+                <Header />
+                <h2>React Application</h2>
+                <Footer year="2022" month="August"/>
+            </>
         )
-    };
+    }
 }
+
 export default App;

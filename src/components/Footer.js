@@ -1,13 +1,12 @@
-import React,{Component} from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
 
 const Footer = (props) => {
-    
     return(
-        <React.Fragment>
-            <hr/>
-            <h2><center>&copy; 2022 All right reserve ❤ Developer Funnel {props.year} {props.month}</center></h2>
-        </React.Fragment>
+        <>
+        <center><hr/>
+        <h3>&copy; {props.year} {props.month} Made in  by Developer Funnel</h3>
+        </center>
+        </>
     )
 }
 
